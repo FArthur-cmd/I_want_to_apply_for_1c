@@ -17,8 +17,11 @@
  *     Добавление по символу с учетом стартовой позиции для вывода ответа.
  *     Поиск элемента и возврат nullptr в случае неудачи
  */
+
+namespace solution {
+
 struct Node {
-    explicit Node(uint64_t start=0);
+    explicit Node(uint64_t start = 0);
 
     std::shared_ptr<Node> AddNode(wchar_t symbol, uint64_t starts);
 
@@ -28,3 +31,5 @@ struct Node {
     uint64_t start;
     std::unordered_map<wchar_t, std::shared_ptr<Node>> next;
 };
+
+}

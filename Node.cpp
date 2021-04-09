@@ -4,7 +4,9 @@
 
 #include "Node.hpp"
 
-Node::Node(uint64_t start): start(start) {}
+namespace solution {
+
+Node::Node(uint64_t start) : start(start) {}
 
 std::shared_ptr<Node> Node::AddNode(wchar_t symbol, uint64_t starts) {
     // if exists return already existing
@@ -26,4 +28,6 @@ std::shared_ptr<Node> Node::Find(wchar_t symbol) {
         return nullptr;
     }
     return next.find(symbol)->second;
+}
+
 }

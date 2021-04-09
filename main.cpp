@@ -20,7 +20,7 @@ int main(int argc, char **argv) {
         return 0;
     }
 
-    Finder answer(in_file);
+    solution::Finder answer(in_file);
 
     size_t n;
     std::wcin >> n;
