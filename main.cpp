@@ -9,8 +9,11 @@
  *
  * read request and print result
  */
-int main() {
-    std::wifstream in_file("/home/illusioncat/CLionProjects/for_1c/input.txt");
+int main(int argc, char **argv) {
+    if (argc < 1) {
+        std::cout << "You forgot to enter full path to file" << std::endl;
+    }
+    std::wifstream in_file(argv[1]);
 
     if (!in_file.is_open()) {
         std::cout << "Error with open" << std::endl;
@@ -25,7 +28,7 @@ int main() {
     std::wstring request;
     for (size_t i = 0; i < n; ++i) {
         std::wcin >> request;
-        std::cout << answer.Find(request);
+        std::cout << answer.Find(request) << std::endl;
     }
 
     return 0;

@@ -24,7 +24,7 @@ struct Node {
 
     std::shared_ptr<Node> Find(wchar_t symbol);
 
-    wchar_t current;
+    wchar_t current; // Оставлен для дебага, если возникнет желание увидеть результат построения бора
     uint64_t start;
     std::unordered_map<wchar_t, std::shared_ptr<Node>> next;
 };
